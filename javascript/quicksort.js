@@ -1,7 +1,10 @@
 let A = [12, 91, 11, 31, 21, 43, 65, 23, 45, 10, 4, 1, 5];
-console.log(A);
+console.log("Array Originale: " + A);
+var startTime = performance.now();
 QuickSort(A, 0, A.length - 1);
-console.log(A);
+var endTime = performance.now();
+console.log("Array Ordinato: " + A);
+console.log("Tempo di esecuzione: " + (endTime - startTime) + " ms!");
 
 function QuickSort(A, p, r) {
     if (p < r) {
