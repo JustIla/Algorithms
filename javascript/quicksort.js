@@ -1,16 +1,20 @@
-let A = [12, 91, 11, 31, 21, 43, 65, 23, 45, 10, 4, 1, 5];
-console.log("Array Originale: " + A);
+let A = [];
+let n = 1000000;
+for (let i = 0; i < n; i++) {
+    A[i] = Math.floor(Math.random() * 100000000);
+}
+console.log("\nArray Originale: " + A);
 var startTime = performance.now();
-QuickSort(A, 0, A.length - 1);
+quickSort(A, 0, A.length - 1);
 var endTime = performance.now();
-console.log("Array Ordinato: " + A);
-console.log("Tempo di esecuzione: " + (endTime - startTime) + " ms!");
+console.log("\nArray Ordinato: " + A);
+console.log("\nTempo di esecuzione: " + (endTime - startTime) + " ms!");
 
-function QuickSort(A, p, r) {
+function quickSort(A, p, r) {
     if (p < r) {
         let q = partition(A, p, r);
-        QuickSort(A, p, q - 1);
-        QuickSort(A, q + 1, r);
+        quickSort(A, p, q - 1);
+        quickSort(A, q + 1, r);
     }
 }
 
