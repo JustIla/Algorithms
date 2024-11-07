@@ -3,12 +3,12 @@ let n = 1000000;
 for (let i = 0; i < n; i++) {
     A[i] = Math.floor(Math.random() * 100000000);
 }
-console.log("\nArray Originale: " + A);
+console.log("\nOriginal Array: " + A);
 var startTime = performance.now();
 quickSort(A, 0, A.length - 1);
 var endTime = performance.now();
-console.log("\nArray Ordinato: " + A);
-console.log("\nTempo di esecuzione: " + (endTime - startTime) + " ms!");
+console.log("\nSorted Array: " + A);
+console.log("\nExecution Time: " + (endTime - startTime) + " ms!");
 
 function quickSort(A, p, r) {
     if (p < r) {

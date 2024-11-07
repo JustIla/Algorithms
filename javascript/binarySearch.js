@@ -6,7 +6,7 @@ for (let i = 0; i < n; i++) {
 array.sort((a, b) => a - b);
 let key = array[Math.floor(Math.random() * n)];
 
-console.log("Array iniziale: " + array + "\nElemento da trovare: " + key);
+console.log("Initial Array: " + array + "\nElement to find: " + key);
 
 var startTime = performance.now();
 
@@ -14,7 +14,7 @@ let p = 0;
 let q = array.length - 1;
 function binarySearch(A, p, q) {
 	if (p > q) {
-		return "non trovato";
+		return "not in the array";
 	}
 	let pos = Math.floor((p + q) / 2);
 	if (A[pos] === key) {
@@ -28,7 +28,7 @@ function binarySearch(A, p, q) {
 	}
 }
 
-console.log("L'elemento si trova in posizione: " + binarySearch(array, p, q));
+console.log("The key is in position: " + binarySearch(array, p, q));
 
 var endTime = performance.now();
-console.log("Tempo di esecuzione: " + (endTime - startTime) + " ms!");
+console.log("Execution Time: " + (endTime - startTime) + " ms!");

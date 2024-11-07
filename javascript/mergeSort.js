@@ -4,7 +4,7 @@ for (let i = 0; i < n; i++) {
     array[i] = Math.floor(Math.random() * 1000000000);
 }
 
-console.log("Array originale: " + array);
+console.log("Initial Array: " + array);
 
 let startTime = performance.now();
 
@@ -65,5 +65,5 @@ if (array.length > 0) {
 
 let endTime = performance.now();
 
-console.log("Array ordinato: " + array);
-console.log("Tempo di esecuzione: " + (endTime - startTime) + " ms!");
+console.log("Sorted Array: " + array);
+console.log("Execution Time: " + (endTime - startTime) + " ms!");
