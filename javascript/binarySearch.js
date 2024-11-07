@@ -12,7 +12,7 @@ var startTime = performance.now();
 
 let p = 0;
 let q = array.length - 1;
-function binarySearch(A, p, q) {
+function binarySearch(A, key, p, q) {
 	if (p > q) {
 		return "not in the array";
 	}
@@ -21,14 +21,14 @@ function binarySearch(A, p, q) {
 		return pos;
 	}
 	if (A[pos] < key) {
-		return binarySearch(A, pos + 1, q);
+		return binarySearch(A, key, pos + 1, q);
 	}
 	if (A[pos] > key) {
-		return binarySearch(A, p, pos - 1);
+		return binarySearch(A, key, p, pos - 1);
 	}
 }
 
-console.log("The key is in position: " + binarySearch(array, p, q));
+console.log("The key is in position: " + binarySearch(array, key, p, q));
 
 var endTime = performance.now();
 console.log("Execution Time: " + (endTime - startTime) + " ms!");
