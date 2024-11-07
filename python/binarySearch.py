@@ -4,7 +4,7 @@ import math
 
 def binarySearch(A, key, low, high):
 
-	if low>high :
+	if low > high :
 		return 
 
 	m = math.floor( (low + high) / 2 )
@@ -16,21 +16,30 @@ def binarySearch(A, key, low, high):
 	else:
 		return binarySearch(A, key, low, m-1)
 
+
 A = [random.randint(1, 100) for _ in range(10)]
 A.sort()
 
 print("Array: ", A)
 
-key = int(input("Scegli l'elemento da cercare: "))
+key = int(input("Search an element: "))
 
 low = 0
 high = len(A) - 1
 
 startTime = time.time()
 
-print("L'elemento si trova nella posizione ", binarySearch(A, key, low, high), " dell'array")
+index = binarySearch(A, key, low, high)
 
 endTime = time.time()
 executionTime =  endTime - startTime
 
-print(f"Tempo di esecuzione: {executionTime:.6f} secondi")
+if index is None:
+	print("The element doesn't exist")
+else:
+	
+	print("The element is located in", index, "position of the array.")
+
+	
+
+print(f"Execution time: {executionTime:.6f} seconds.")

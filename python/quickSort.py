@@ -20,7 +20,7 @@ def quickSort(A, p, r):
 
 A = [random.randint(1, 100) for _ in range(10)]
 
-print("Array disordinato:", A)
+print("Unsorted array:", A)
 
 startTime = time.time()
 
@@ -29,5 +29,5 @@ quickSort(A, 0, len(A) - 1)
 endTime = time.time()
 executionTime = (endTime - startTime)
 
-print("Array ordinato:", A)
-print(f"Tempo di esecuzione: {executionTime:.6f} secondi")
+print("Sorted array:", A)
+print(f"Execution time: {executionTime:.6f} seconds")
