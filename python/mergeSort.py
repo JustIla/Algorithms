@@ -41,7 +41,7 @@ def mergeSort(A, p, r):
 		merge(A, p, q, r)
 
 
-A = [random.randint(1, 1000000) for _ in range(1000000)]
+A = [random.randint(1, 10) for _ in range(10)]
 
 print("Unsorted array:", A)
 

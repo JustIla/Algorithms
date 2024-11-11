@@ -7,7 +7,7 @@ def binarySearch(A, key, low, high):
 	if low > high :
 		return 
 
-	m = math.floor( (low + high) / 2 )
+	m = (low + high) // 2 
 
 	if A[m] == key:
 		return m
